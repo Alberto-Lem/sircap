@@ -1,0 +1,45 @@
+<mat-form-field class="filtro-planes">
+    <mat-label>Filtrar por coincidencia</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Digitar cualquier dato" #input>
+</mat-form-field>
+
+<mat-paginator [pageSizeOptions]="[6, 12, 24, 48, 105]" [pageSize]="pageSize" [length]="paginatorLength"
+    (page)="changePage($event)" aria-label="Seleccionar página de planes"></mat-paginator>
+<br>
+<div class="flex-container">
+    <div *ngIf="loading" class="loading-spinner">
+        <mat-spinner></mat-spinner>
+        {{ loadingText }}{{ loadingDots }}
+        <span *ngFor="let dot of [1, 2, 3]">.</span>
+    </div>
+    <div class="flex-item" *ngFor="let planes of planesToShow">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title><h5>No: {{ planes.noPlan }}</h5></mat-card-title>
+            </mat-card-header>
+            <!--img mat-card-image [src]="planes.imageCoverUrl"!-->
+            <mat-card-content>
+                <h6><strong>Nombre del plan: </strong>{{ planes.nombrePlan }}</h6>
+                <h6><strong>Encargado: </strong>{{ planes.encargado }}</h6>
+                <p>
+                    <strong>Fecha inicio: </strong>{{ planes.fechaInicio | date:'dd-MM-YYYY' }}
+                    <br>
+                    <strong>Fecha finalización: </strong>{{ planes.fechaFinalizacion | date: 'dd/MM/yyyy' }}
+                    <br>
+                    <strong>Cantidad : </strong>{{ planes.cantidadParticipante | number }}
+                    <br>
+                    <strong>Poblacion: </strong>{{ planes.poblacion }} 
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button color="info" (click)="planes.id && redirectToDetailCourse(planes.id)">
+                    Leer más ...
+                </button>
+                <button mat-button color="warn" (click)="planes.id && redirectToEditCourse(planes.id)">
+                    Editar
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
+<mat-paginator [pageSizeOptions]="[6,12, 24, 48, 105]" [pageSize]="pageSize" [length]="paginatorLength"
+    (page)="changePage($event)" aria-label="Seleccionar página de planess"></mat-paginator>

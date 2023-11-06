@@ -1,0 +1,16 @@
+.container-planes {
+    background-color: rgb(247, 247, 247);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    border-radius: 1%;
+}
+.opciones{
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+.active{
+    color: blueviolet;
+}

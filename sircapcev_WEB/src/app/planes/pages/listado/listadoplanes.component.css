@@ -1,0 +1,40 @@
+.text-center{
+    text-align: center; 
+}
+
+.full-width{
+    width: 100%;
+}
+.filtro-planes{
+    width: 50%;
+    margin-bottom: 10px;
+}
+/* Personalización de .flex-container */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espacio entre elementos en píxeles */
+    flex-direction: row;
+    @media (max-width: 768px) {
+        gap: 10px; /* Espacio entre elementos en píxeles */
+    }
+    @media (max-width: 576px) {
+        gap: 5px; /* Espacio entre elementos en píxeles */
+    }
+}
+
+/* Personalización de .flex-item */
+.flex-item {
+    flex: 0 0 300px; /* Tamaño fijo de 200 píxeles para el ancho */
+    height: 400px; /* Tamaño fijo de 300 píxeles para el alto */
+    @media (max-width: 768px) {
+        flex: 0 0 250px; /* Tamaño fijo de 250 píxeles en pantallas más pequeñas */
+        height: 350px; /* Tamaño fijo de 350 píxeles para el alto en pantallas más pequeñas */
+    }
+    @media (max-width: 576px) {
+        flex: 0 0 300px; /* Tamaño fijo de 300 píxeles en pantallas aún más pequeñas */
+        height: 400px; /* Tamaño fijo de 400 píxeles para el alto en pantallas aún más pequeñas */
+    }
+}
+

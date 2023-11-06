@@ -1,0 +1,110 @@
+<div class="form-container">
+    <h2>Realiar inscripción manual</h2>
+    <form [formGroup]="planesForm" (ngSubmit)="guardar()">
+        <div class="form-group">
+            <label for="noPlan">Número plan</label>
+            <input type="text" id="noPlan" formControlName="noPlan" required>
+            <div *ngIf="planesForm.get('noPlan')?.hasError('required') && planesForm.get('noPlan')?.touched">
+                <small class="text-danger">Este campo es obligatorio.</small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="nombrePlan">Nombre plan</label>
+            <input type="text" id="nombrePlan" formControlName="nombrePlan" required>
+            <div *ngIf="planesForm.get('nomobrePlan')?.hasError('required') && planesForm.get('nombrePlan')?.touched">
+                <small class="text-danger">Este campo es obligatorio.</small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="cantidadParticipante">Cantidad participante</label>
+            <input type="number" id="cantidadParticipante" formControlName="cantidadParticipante" required>
+            <div
+                *ngIf="planesForm.get('cantidadParticipante')?.hasError('required') && planesForm.get('cantidadParticipante')?.touched">
+                <small class="text-danger">Este campo es obligatorio.</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="estado">Estado</label>
+            <select id="estado" formControlName="estado" required>
+                <option value="">Seleccione</option> <!-- Agregar una opción predeterminada -->
+                <option value="Por ejecutar">Por ejecutar</option>
+                <option value="Ejecutando">Ejecutando</option>
+                <option value="Suspendido">Suspendido</option>
+                <option value="Finalizado">Finalizado</option>
+                <option value="Archivar">Archivar</option>
+            </select>
+            <div *ngIf="planesForm.get('estado')?.hasError('required') && planesForm.get('estado')?.touched">
+                <div class="text-danger">Este campo es obligatorio.</div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="fechainicio">Fecha Inicio</label>
+            <input type="date" id="fechaInicio" formControlName="fechaInicio" required>
+            <div
+                *ngIf="planesForm?.get('fechaInicio')?.hasError('required') && planesForm?.get('fechaInicio')?.touched">
+                <div class="text-danger">Este campo es obligatorio.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="fechaFinalizacion">Fecha finalización</label>
+            <input type="date" id="fechaFinalizacion" formControlName="fechaFinalizacion" required>
+            <div
+                *ngIf="planesForm?.get('fechaFinalizacion')?.hasError('required') && planesForm?.get('fechaFinalizacion')?.touched">
+                <div class="text-danger">Este campo es obligatorio.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="modalidad">Modalidad</label>
+            <select id="modalidad" formControlName="modalidad" required>
+                <option value="">Seleccione</option>
+                <option value="presencial">Presencial</option>
+                <option value="Virtual">Virtual</option>
+                <option value="semi-presencial">Semi-presencial</option>
+            </select>
+            <div *ngIf="planesForm.get('modalidad')?.hasError('required') && planesForm.get('modalidad')?.touched">
+                <div class="text-danger">Este campo es obligatorio.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="poblacion">Población objectiva</label>
+            <input type="text" id="poblacion" formControlName="poblacion" required>
+            <div *ngIf="planesForm.get('poblacion')?.hasError('required') && planesForm.get('poblacion')?.touched">
+                <div class="text-danger">Este campo es obligatorio.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="encargado">Nombre del encargado</label>
+            <input type="text" id="encargado" formControlName="encargado" required>
+            <div *ngIf="planesForm.get('encargado')?.hasError('required') && planesForm.get('encargado')?.touched">
+                <div class="text-danger">Este campo es obligatorio.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="lugarEjecucion">Lugar de ejecución</label>
+            <input type="text" id="lugarEjecucion" formControlName="lugarEjecucion" required>
+            <div
+                *ngIf="planesForm.get('lugarEjecucion')?.hasError('required') && planesForm.get('lugarEjecucion')?.touched">
+                <div class="text-danger">Este campo es obligatorio.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="comentario">Comentario</label>
+            <input type="text" id="comentario" formControlName="comentario" required>
+            <div *ngIf="planesForm.get('comentario')?.hasError('required') && planesForm.get('comentario')?.touched">
+                <div class="text-danger">Este campo es obligatorio.</div>
+            </div>
+        </div>
+
+        <button type="submit" [disabled]="!planesForm.valid">Guardar</button>
+    </form>
+</div>

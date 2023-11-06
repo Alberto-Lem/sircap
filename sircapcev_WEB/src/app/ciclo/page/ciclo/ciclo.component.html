@@ -1,0 +1,28 @@
+<h2>Ciclo</h2>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+    <!-- Position Column -->
+   <ng-container matColumnDef="ciclo_ID">
+      <th mat-header-cell *matHeaderCellDef>No. Ciclo</th>
+      <td mat-cell *matCellDef="let element">{{element.id}}</td>
+    </ng-container>
+    <!-- Name Column -->
+    <ng-container matColumnDef="asignaturas">
+      <th mat-header-cell *matHeaderCellDef>Asignaturas</th>
+      <td mat-cell *matCellDef="let element">{{element.asignaturas}}</td>
+    </ng-container>
+  <!-- Name Column -->
+  <ng-container matColumnDef="CTS">
+    <th mat-header-cell *matHeaderCellDef>CTS</th>
+    <td mat-cell *matCellDef="let element">{{element.CTS}}</td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="Requisitos">
+    <th mat-header-cell *matHeaderCellDef>Requisitos</th>
+    <td mat-cell *matCellDef="let element">{{element.Requisitos}}</td>
+  </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

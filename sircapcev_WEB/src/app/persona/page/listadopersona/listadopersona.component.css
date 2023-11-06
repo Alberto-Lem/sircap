@@ -1,0 +1,69 @@
+table {
+  width: 100%;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.filter-people{
+  width: 50%;
+  margin-bottom: 10px;
+}
+/* Alinea los botones en la misma fila */
+.mat-cell .action-buttons {
+  display: flex;
+  gap: 10px; /* Espacio entre los botones */
+  align-items: center; /* Centra verticalmente los botones */
+}
+
+/* Estilo para los botones */
+.mat-cell .action-buttons button {
+  min-width: 0; /* Permite que los botones se ajusten al contenido */
+  padding: 6px 12px; /* Ajusta el espaciado interior de los botones según sea necesario */
+}
+
+
+/* Botón Detalles */
+.action-buttons button.details {
+  background-color: green; /* Cambia el color de fondo a verde */
+  color: white; /* Cambia el color del texto a blanco */
+}
+
+/* Botón Editar */
+.action-buttons button.edit {
+  background-color: blue; /* Cambia el color de fondo a azul */
+  color: white; /* Cambia el color del texto a blanco */
+}
+
+/* Botón Eliminar */
+.action-buttons button.delete {
+  background-color: red; /* Cambia el color de fondo a rojo */
+  color: white; /* Cambia el color del texto a blanco */
+}
+
+/* Establece anchos personalizados para las columnas */
+.no-column {
+  width: 4%; /* Ancho personalizado para la columna "No" */
+}
+
+.gradoPolicial-column {
+  width: 17%; /* Ancho personalizado para la columna "Grado Policial" */
+}
+
+.nombres-column {
+  width: 22%; /* Ancho personalizado para la columna "Nombres" */
+}
+
+.apellidos-column {
+  width: 22%; /* Ancho personalizado para la columna "Apellidos" */
+}
+
+.nip-column {
+  width: 10%; /* Ancho personalizado para la columna "NIP" */
+}
+
+.genero-column {
+  width: 8%; /* Ancho personalizado para la columna "Género" */
+}

@@ -1,0 +1,22 @@
+<h2 mat-dialog-title class="dialog-title">Inicio de Sesión</h2>
+<mat-dialog-content>
+  <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+    <mat-form-field>
+      <input matInput placeholder="Nombre de usuario" [(ngModel)]="username" name="username" maxlength="60" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="{{ showPassword ? 'text' : 'password' }}" placeholder="Contraseña" [(ngModel)]="password"
+        name="password" maxlength="18" required>
+      <i class="password-toggle-icon" (click)="togglePasswordVisibility()">
+        <span *ngIf="!showPassword" class="fa fa-eye"></span>
+        <span *ngIf="showPassword" class="fa fa-eye-slash"></span>
+      </i>
+    </mat-form-field>
+  </form>
+  <div class="forgot-password" (click)="onForgotPassword()">¿Se te olvidó la contraseña?</div>
+</mat-dialog-content>
+<mat-progress-bar mode="indeterminate" *ngIf="showProgressBar"></mat-progress-bar>
+<mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="onSubmit(loginForm)">Iniciar Sesión</button>
+</mat-dialog-actions>

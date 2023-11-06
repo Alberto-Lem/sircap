@@ -1,0 +1,33 @@
+.error-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+}
+
+.container {
+  text-align: center;
+}
+
+.error-image {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 48px;
+  color: #333;
+}
+
+p {
+  font-size: 24px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+a {
+  font-size: 20px;
+  color: #337ab7;
+  text-decoration: none;
+}

@@ -1,0 +1,119 @@
+<div *ngIf="persona" class="persona-detail">
+  <h1 class="text-center">Detalles de la persona</h1>
+  <div class="container">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th class="first-column">Título</th>
+          <th>Datos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="first-column">Id</td>
+          <td>{{ persona.id}}</td>
+        </tr>
+        <tr>
+          <td class="first-column">NIP</td>
+          <td>{{ persona.nip }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Grado Policial</td>
+          <td >{{ persona.gradoPolicial }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Nombres</td>
+          <td>{{ persona.nombres }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Apellidos</td>
+          <td>{{ persona.apellidos }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Genero</td>
+          <td>{{ persona.genero }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">dpi</td>
+          <td>{{ persona.dpi }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Nit</td>
+          <td>{{ persona.nit}}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Número de afiliación de IGSS</td>
+          <td>{{ persona.noAfiliacionIgss }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Renglo Presupuestario</td>
+          <td>{{ persona.renglonPresupuestario}}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Fecha Nacimiento</td>
+          <td>{{ persona.fechaDeNacimiento | date:'dd-MM-YYYY' }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Edad</td>
+          <td>{{ persona.edad }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Lugar de servicio</td>
+          <td>{{ persona.lugarDeServicio }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Destino Actual</td>
+          <td>{{ persona.destinoActual }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Dependencia donde labora</td>
+          <td>{{ persona.dependenciaDondeLabora}}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Telefono</td>
+          <td>{{ persona.telefono }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Correo personal</td>
+          <td>{{ persona.correoElectronicoPersonal }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Correo institucional</td>
+          <td>{{ persona.correoElectronicoInstitucional }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Grupo étnico</td>
+          <td>{{ persona.grupoEtnico }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Escolaridad</td>
+          <td>{{ persona.escolaridad }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">tituloObtenido</td>
+          <td>{{ persona.tituloObtenido }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Número Colegiado Activo</td>
+          <td>{{ persona.numeroColegiadoActivo }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Idiomas que domina</td>
+          <td>{{ persona.idiomasQueDomina }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Estudia Actualmente</td>
+          <td>{{ persona.estudiaActualmente }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Nombres de la Carrera</td>
+          <td>{{ persona.nombreCarrera}}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Otros estudios realizado</td>
+          <td>{{ persona.otrosEstudiosRealizados }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

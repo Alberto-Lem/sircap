@@ -1,0 +1,92 @@
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para las pestañas de MatTab */
+.mat-tab-label {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.mat-tab-body-wrapper {
+  background-color: #fff;
+}
+
+/* Estilos para el carrusel */
+.carousel-caption {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #000;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Estilos para las tarjetas */
+.card {
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para las imágenes de las tarjetas */
+.card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Estilos para los títulos de las tarjetas */
+.card-title {
+  font-weight: bold;
+}
+
+/* Estilos para los enlaces de teléfono */
+.card-text a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Estilos para los enlaces de redes sociales */
+.card-text a.btn {
+  margin: 5px;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.card-text a.btn:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  z-index: 999;
+  animation: floatingAnimation 2s ease-in-out infinite;
+}
+
+@keyframes floatingAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.demo-inline-calendar-card {
+  width: 475px;
+}

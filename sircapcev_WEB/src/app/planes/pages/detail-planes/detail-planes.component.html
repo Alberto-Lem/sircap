@@ -1,0 +1,67 @@
+<div *ngIf="planes" class="planes-details">
+  <h1 class="text-center">Detalles del plane</h1>
+  <div class="container">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th class="first-column">Título</th>
+          <th>Datos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="first-column">No. Plan</td>
+          <td>{{ planes.noPlan}}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Nombre Plan</td>
+          <td>{{ planes.nombrePlan }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Cantidad de Participantes</td>
+          <td >{{ planes.cantidadParticipante }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Estado</td>
+          <td>{{ planes.estado }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Fecha creación</td>
+          <td>{{ planes.fechaCreacion | date:'dd-MM-YYYY' }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Fecha modificación</td>
+          <td>{{ planes.fechaModificacion | date:'dd-MM-YYYY' }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Fecha de Inicio</td>
+          <td>{{ planes.fechaInicio | date:'dd-MM-YYYY' }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Fecha de Finalización</td>
+          <td>{{ planes.fechaFinalizacion | date:'dd-MM-YYYY' }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Modalidad</td>
+          <td>{{ planes.modalidad }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Población objetiva</td>
+          <td>{{ planes.poblacion }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Encargado</td>
+          <td>{{ planes.encargado }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Lugar de Ejecución</td>
+          <td>{{ planes.lugarEjecucion }}</td>
+        </tr>
+        <tr>
+          <td class="first-column">Comentario</td>
+          <td>{{ planes.comentario }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

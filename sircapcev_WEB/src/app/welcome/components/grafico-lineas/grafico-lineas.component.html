@@ -1,0 +1,34 @@
+<ngx-charts-line-chart
+  [view]="view"
+  scheme="cool"
+  [legend]="Grado"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxis]="xAxis"
+  [yAxis]="yAxis"
+  [xAxisLabel]="xAxisLabel"
+  [yAxisLabel]="yAxisLabel"
+  [timeline]="timeline"
+  [results]="multi"
+  (select)="onSelect($event)"
+  (activate)="onActivate($event)"
+  (deactivate)="onDeactivate($event)"
+  >
+</ngx-charts-line-chart>
+
+
+<div class="main-content">
+  <mat-card class="custom-card">
+    <mat-card-content class="custom-card-content">
+      <span class="spacer"></span>
+      <label for="fechaInicio">Fecha inicio:</label>
+      <input type="date" id="fechaInicio" [(ngModel)]="inicioStr">
+      <span class="spacer"></span>
+      <label for="fechaFin">Fecha fin:</label>
+      <input type="date" id="fechaFin" [(ngModel)]="finStr">
+      
+      <button class="button-filtrar" (click)="filtrarDatos()">Filtrar Datos</button>
+      <button class="button-restablecer" (click)="restablecerFechas()">Restablecer</button>
+    </mat-card-content>
+  </mat-card>
+</div>

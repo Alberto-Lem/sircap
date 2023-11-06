@@ -1,0 +1,91 @@
+<nav class="nav">
+    <mat-toolbar *ngIf="!isLogged">
+        <span class="spacer"></span>
+        <a class="navbar-brand">
+            <img src="assets/icono/edu-icon.png" alt="Icono" class="icon-animation" />
+            <span>
+                Centro de Educación Virtual
+            </span>
+        </a>
+        <span class="spacer"></span>
+    </mat-toolbar>
+
+    <mat-toolbar>
+        <span class="spacer"></span>
+        <span class="spacer"></span>
+        <div *ngIf="isLogged" class="d-flex flex-column align-items-center justify-content-center" (click)="openPerfilDialog()">
+            <img src="assets/icono/account.png" alt="Foto de perfil" class="profile-image">
+            <span class="navbar-text me-3">{{ username }}</span>
+        </div>  
+        <button *ngIf="isLogged" class="btn btn-outline-danger" type="submit" (click)="logOut()">
+            Log Out
+        </button>
+        <button *ngIf="!isLogged" mat-button (click)="openLoginDialog()" class="mat-button mat-button--primary">
+            Login
+        </button>
+    </mat-toolbar>
+    <div class="main-content-container">
+        <div class="main-sidenav-content" *ngIf="!isLogged">
+            <router-outlet></router-outlet>
+            <app-footer></app-footer>
+        </div>
+    </div>
+</nav>
+
+<mat-drawer-container class="lateral-container" *ngIf="isLogged" autosize>
+    <mat-drawer #drawer mode="side" opened>
+        <div class="logo">
+            <mat-toolbar>
+                <a class="nav-lateral">
+                    <img src="assets/icono/edu-icon.png" alt="Icono" style="width: 50px" />
+                </a>
+            </mat-toolbar>
+            <a class="navbar-brand">
+                <span>
+                    CEV
+                </span>
+            </a>
+        </div>
+
+        <mat-nav-list>
+            <a mat-list-item (click)="onHomeClick()" routerLinkActive="active" class="custom-link">
+                <mat-icon matListIcon svgIcon="home"></mat-icon>
+                <span matLine class="white-text">Home</span>
+            </a>
+            <a mat-list-item (click)="onDashboardClick()" routerLinkActive="active" class="custom-link">
+                <mat-icon matListIcon svgIcon="dashboard"></mat-icon>
+                <span matLine class="white-text">Dashboard</span>
+            </a>
+            <a mat-list-item (click)="onPersonasClick()" routerLinkActive="active" class="custom-link">
+                <mat-icon matListIcon svgIcon="persona"></mat-icon>
+                <span matLine class="white-text">Personas</span>
+            </a>
+            <a mat-list-item (click)="onPlanesClick()" routerLinkActive="active" class="custom-link">
+                <mat-icon matListIcon svgIcon="planes"></mat-icon>
+                <span matLine class="white-text">Planes</span>
+            </a>
+            <a mat-list-item (click)="onCertificadosClick()" routerLinkActive="active" class="custom-link">
+                <mat-icon matListIcon svgIcon="certificados"></mat-icon>
+                <span matLine class="white-text">Certificados</span>
+            </a>
+            <a mat-list-item (click)="onInscripcionesClick()" routerLinkActive="active" class="custom-link">
+                <mat-icon matListIcon svgIcon="asignacion"></mat-icon>
+                <span matLine class="white-text">Inscripciones</span>
+            </a>
+            <a mat-list-item (click)="onRegisterClick()" routerLinkActive="active" class="custom-link">
+                <mat-icon matListIcon svgIcon="register"></mat-icon>
+                <span matLine class="white-text">Crear usuario</span>
+            </a>
+        </mat-nav-list>
+    </mat-drawer>
+    <!-- Botón del menú -->
+    <button mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+
+    <div class="main-sidenav-content">
+        <router-outlet></router-outlet>
+
+    </div>
+    <app-footer></app-footer>
+</mat-drawer-container>

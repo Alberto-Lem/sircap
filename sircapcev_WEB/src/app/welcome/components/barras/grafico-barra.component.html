@@ -1,0 +1,37 @@
+<ngx-charts-bar-vertical-2d
+  [view]="view"
+  scheme="cool"
+  [results]="multi"
+  [gradient]="gradient"
+  [xAxis]="showXAxis"
+  [yAxis]="showYAxis"
+  [legend]="showLegend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxisLabel]="xAxisLabel"
+  [yAxisLabel]="yAxisLabel"
+  [legendTitle]="legendTitle"
+  (select)="onSelect($event)"
+  (activate)="onActivate($event)"
+  (deactivate)="onDeactivate($event)">
+</ngx-charts-bar-vertical-2d>
+
+<div class="main-content">
+  <mat-card class="custom-card">
+    <mat-card-content class="custom-card-content">
+      <span class="spacer"></span>
+      <label for="startYear">Año de inicio:</label>
+      <select id="startYear" [(ngModel)]="selectedStartYear">
+        <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+      </select>
+      
+      <label for="endYear">Año de fin:</label>
+      <select id="endYear" [(ngModel)]="selectedEndYear">
+        <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+      </select>
+      
+      <button class="button-filtrar" (click)="filtrarDatos()">Filtrar Datos</button>
+      <button class="button-restablecer" (click)="restablecerDatos()">Restablecer</button>
+    </mat-card-content>
+  </mat-card>
+</div>

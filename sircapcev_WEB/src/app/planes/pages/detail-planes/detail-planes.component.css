@@ -1,0 +1,28 @@
+/* Aplica estilos a la tabla */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Estilos para las filas de la tabla */
+  .table tbody tr {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Estilos para las celdas de la tabla */
+  .table tbody td {
+    padding: 8px;
+    word-wrap: break-word; /* Permite que el contenido se ajuste automáticamente si es largo */
+  }
+  
+  /* Estilos para las celdas de encabezado */
+  .table thead th {
+    background-color: #f2f2f2;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  /* Estilos para la primera columna */
+.first-column {
+  width: 300px; /* Establece el ancho deseado para la primera columna */
+}

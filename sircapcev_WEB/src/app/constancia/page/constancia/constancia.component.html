@@ -1,0 +1,26 @@
+<div class="certificate-container">
+  <div class="certificate-header">
+    <img src="assets/icono/edu-icon.png" alt="Logo de la empresa" class="logo">
+    <h1>Constancia de Curso</h1>
+  </div>
+
+<!-- Certificado Content -->
+<div class="certificate-content">
+  <p>Por medio de la presente, se certifica que:</p>
+  <p><strong>{{ constancia1.nombre }}</strong></p>
+  <p>ha completado el curso:</p>
+  <p><strong>{{ constancia1.nombreCurso }}</strong></p>
+  <p>con una duración de {{ constancia1.duracion }} horas.</p>
+  <p>Fecha de finalización: {{ constancia1.fechaFinalizacion }}</p>
+</div>
+
+<!-- Firma Electrónica de Texto y Código QR -->
+<div class="certificate-footer">
+  <p>Firma Electrónica:</p>
+  <p>{{ constancia1.firmaElectronica }}</p>
+  <p>Nombre del instructor: {{ constancia1.nombreInstructor }}</p>
+</div>
+
+
+
+<br>

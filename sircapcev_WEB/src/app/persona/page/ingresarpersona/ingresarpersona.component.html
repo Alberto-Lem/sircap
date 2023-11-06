@@ -1,0 +1,247 @@
+<div class="form-container">
+    <h2>Ingresar datos</h2>
+    <form [formGroup]="personaForm" (ngSubmit)="guardar()">
+
+        <div class="form-group">
+            <label for="nip">NIP</label>
+            <input type="text" id="nip" formControlName="nip" required>
+            <div *ngIf="personaForm.get('nip')?.hasError('required') && personaForm.get('nip')?.touched">
+                <small class="text-danger">Este campo es obligatorio.</small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="gradoPolicial">Grado Policial</label>
+            <select id="gradoPolicial" formControlName="gradoPolicial" required>
+                <option value="">Seleccione</option> <!-- Agregar una opción predeterminada -->
+                <option value="Administrativo">Administrativo</option>
+                <option value="Agente de Policía">Agente de Policía</option>
+                <option value="Subinspector de Policía">Subinspector de Policía</option>
+                <option value="Inspector de Policía">Inspector de Policía</option>
+                <option value="Oficial Tercero de Policía">Oficial Tercero de Policía</option>
+                <option value="Oficial Segundo de Policía">Oficial Segundo de Policía</option>
+                <option value="Oficial Primero de Policía">Ofical Primero de Policía</option>
+                <option value="Subcomisario de Policía">Subcomisario de Policía</option>
+                <option value="Comisario de Policía">Comisario de Policía</option>
+                <option value="Comisario General de Policía">Comisario General de Policía</option>
+                <option value="otro">Otro</option>
+            </select>
+            <div
+                *ngIf="personaForm.get('gradoPolicial')?.hasError('required') && personaForm.get('gradoPolicial')?.touched">
+                <div class="text-danger">Este campo es obligatorio.</div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="nombres">Nombres</label>
+            <input type="text" id="nombres" formControlName="nombres" required>
+            <div *ngIf="personaForm?.get('nombres')?.hasError('required') && personaForm?.get('nombres')?.touched">
+                <div class="text-danger">Este campo es obligatorio.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" formControlName="apellidos" required>
+            <div *ngIf="personaForm?.get('apelldos')?.hasError('required') && personaForm?.get('apellidos')?.touched">
+                <div class="text-danger">Este campo es obligatorio.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="genero">Género</label>
+            <select id="genero" formControlName="genero" required>
+                <option value="">Seleccione</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="otro">Otro</option>
+            </select>
+            <div *ngIf="personaForm.get('genero')?.hasError('required') && personaForm.get('genero')?.touched">
+                <div class="text-danger">Este campo es obligatorio.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="dpi">DPI</label>
+            <input type="text" id="dpi" formControlName="dpi" required>
+            <div *ngIf="personaForm.get('dpi')?.hasError('required') && personaForm.get('dpi')?.touched">
+                <div class="text-danger">Este campo es obligatorio.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="nit">NIT</label>
+            <input type="text" id="nit" formControlName="nit" required>
+            <div *ngIf="personaForm.get('nit')?.hasError('required') && personaForm.get('nit')?.touched">
+                <div class="text-danger">Este campo es obligatorio.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="noAfiliacionIgss">No. Afiliación IGSS</label>
+            <input type="number" id="noAfiliacionIgss" formControlName="noAfiliacionIgss" required>
+            <div *ngIf="personaForm.get('noAfiliacionIgss')?.hasError('required') && personaForm.get('noAfiliacionIgss')?.touched">
+                <div class="text-danger">Este campo es obligatorio.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="reglonPresupuestario">Renglón presupuestaria</label>
+            <select id="reglonPresupuestario" formControlName="renglonPresupuestario" required>
+                <option value="">Seleccione</option>
+                <option value="0-11">0-11</option>
+                <option value="0-22">0-22</option>
+                <option value="0-18">0-18</option>
+                <option value="0-21">0-21</option>
+                <option value="0-29">0-29</option>
+                <option value="otro">Otro</option>
+            </select>
+            <div *ngIf="personaForm.get('renglonPresupuestario')?.hasError('required') && personaForm.get('renglonPresupuestario')?.touched">
+                <div class="text-danger">Este campo es obligatorio.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="fechaDeNacimiento">Fecha de Nacimiento</label>
+            <input type="date" id="fechaDeNacimiento" formControlName="fechaDeNacimiento" required>
+            <div *ngIf="personaForm.get('fechaDeNacimiento')?.hasError('required') && personaForm.get('fechaDeNacimiento')?.touched">
+                <div class="text-danger">Este campo es obligatorio.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="direccionResidencial">Dirección Residencial</label>
+            <input type="text" id="direccionResidencial" formControlName="direccionResidencial" required>
+            <div *ngIf="personaForm.get('direccionResidencial')?.hasError('required') && personaForm.get('direccionResidencial')?.touched">
+                <div class="text-danger">Este campo es obligatorio.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="lugarDeServicio">Lugar de Servicio</label>
+            <input type="text" id="lugarDeServicio" formControlName="lugarDeServicio" required>
+            <div *ngIf="personaForm.get('lugarDeServicio')?.hasError('required') && personaForm.get('lugarDeServicio')?.touched">
+                <div class="text-danger">Este campo es obligatorio.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="destinoActual">Destino Actual</label>
+            <input type="text" id="destinoActual" formControlName="destinoActual" required>
+        </div>
+
+        <div class="form-group">
+            <label for="dependenciaDondeLabora">Dependencia Donde Labora</label>
+            <input type="text" id="dependenciaDondeLabora" formControlName="dependenciaDondeLabora" required>
+        </div>
+
+        <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="text" id="telefono" formControlName="telefono" required>
+            <div *ngIf="personaForm.get('telefono')?.hasError('required') && personaForm.get('telefono')?.touched">
+                <div class="text-danger">Este campo es obligatorio.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="correoElectronicoPersonal">Correo Electrónico Personal</label>
+            <input type="text" id="correoElectronicoPersonal" formControlName="correoElectronicoPersonal" required>
+            <div
+                *ngIf="personaForm?.get('correoElectronicoPersonal')?.hasError('required') && personaForm?.get('correoElectronicoPersonal')?.touched">
+                <div class="text-danger">Este campo es obligatorio.</div>
+            </div>
+            <div
+                *ngIf="personaForm?.get('correoElectronicoPersonal')?.hasError('email') && personaForm?.get('correoElectronicoPersonal')?.touched">
+                <div class="text-danger">Ingresa un correo electrónico válido.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="correoElectronicoInstitucional">Correo institucional</label>
+            <input type="text" id="correoElectronicoInstitucional" formControlName="correoElectronicoInstitucional">
+            <div
+                *ngIf="personaForm?.get('correoElectronicoInstitucional')?.hasError('email') && personaForm?.get('correoElectronicoInstitucional')?.touched">
+                <div class="text-danger">Ingresa un correo electrónico válido.</div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="grupoEtnico">Grupo Étnico</label>
+            <select id="grupoEtnico" formControlName="grupoEtnico" required>
+                <option value="">Selecione</option>
+                <option value="Ladino">Ladino</option>
+                <option value="Xinca">Xinca</option>
+                <option value="Maya">Maya</option>
+                <option value="Garifuna">Garifuna</option>
+            </select>
+            <div *ngIf="personaForm.get('grupoEtnico')?.hasError('required') && personaForm.get('grupoEtnico')?.touched">
+                <div class="text-danger">Este campo es obligatorio.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="escolaridad">Escolaridad</label>
+            <select id="escolaridad" formControlName="escolaridad" required>
+                <option value="">Seleccione</option>
+                <option value="Primaria">Primaria</option>
+                <option value="Diversificado">Diversificado</option>
+                <option value="Licenciatura">Licenciatura</option>
+                <option value="Maestría">Maestría</option>
+                <option value="Doctorado">Doctorado</option>
+            </select>
+            <div *ngIf="personaForm.get('escolaridad')?.hasError('required') && personaForm.get('escolaridad')?.touched">
+                <div class="text-danger">Este campo es obligatorio.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="tituloObtenido">Título Obtenido</label>
+            <input type="text" id="tituloObtenido" formControlName="tituloObtenido" required>
+        </div>
+
+        <div class="form-group">
+            <label for="numeroColegiadoActivo">Número colegiado activo</label>
+            <input type="text" id="numeroColegiadoActivo" formControlName="numeroColegiadoActivo">
+        </div>
+
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Idiomas que domina
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="form-group">
+              <mat-selection-list #idiomasSelectionList [multiple]="true">
+                <mat-list-option *ngFor="let idioma of idiomas" [value]="idioma" (click)="toggleIdioma(idioma)">
+                  {{ idioma }}
+                </mat-list-option>
+              </mat-selection-list>
+            </div>
+          </mat-expansion-panel>
+          
+        
+
+        <div class="form-group">
+            <label for="estudiaActualmente">EstudiaActualmente</label>
+            <select id="estudiaActualmente" formControlName="estudiaActualmente" required>
+                <option value="No">No</option>
+                <option value="Si">Si</option>
+            </select>
+        </div>
+
+        <div class="form-group" *ngIf="personaForm?.get('estudiaActualmente')?.value === 'Si'">
+            <label for="nombreCarrera">Nombre de Carrera *</label>
+            <input type="text" id="nombreCarrera" formControlName="nombreCarrera"
+                placeholder="Ejemplo: Sciencias Juridicas">
+        </div>
+
+        <div class="form-group">
+            <label for="otrosEstudiosRealizados">Otros Estudios Realizados</label>
+            <input type="text" id="otrosEstudiosRealizados" formControlName="otrosEstudiosRealizados">
+        </div>
+
+        <button type="submit" [disabled]="!personaForm.valid">Guardar</button>
+    </form>
+</div>

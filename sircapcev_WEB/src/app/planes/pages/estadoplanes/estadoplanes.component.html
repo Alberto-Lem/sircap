@@ -1,0 +1,66 @@
+<div cdkDropListGroup style="display: flex;">
+    <!-- Sección "Por ejecutar" -->
+    <div class="example-container" style="flex: 1;">
+        <h2>Por ejecutar</h2>
+        <div cdkDropList [cdkDropListData]="a" class="example-list" cdkDropListSortingDisabled
+            (cdkDropListDropped)="drop($event)">
+            <div class="example-box" *ngFor="let plan of a" cdkDrag>
+                No: {{ plan.noPlan }}
+                <br>
+                Encargado: {{ plan.encargado }}
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección "Ejecutando" -->
+    <div class="example-container" style="flex: 1;">
+        <h2>Ejecutando</h2>
+        <div cdkDropList [cdkDropListData]="b" class="example-list" cdkDropListSortingDisabled
+            (cdkDropListDropped)="drop($event)">
+            <div class="example-box" *ngFor="let plan of b" cdkDrag>
+                No: {{ plan.noPlan }}
+                <br>
+                Encargado: {{ plan.encargado }}
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección "Suspendido" -->
+    <div class="example-container" style="flex: 1;">
+        <h2>Suspendido</h2>
+        <div cdkDropList [cdkDropListData]="c" class="example-list" cdkDropListSortingDisabled
+            (cdkDropListDropped)="drop($event)">
+            <div class="example-box" *ngFor="let plan of c" cdkDrag>
+                No: {{ plan.noPlan }}
+                <br>
+                Encargado: {{ plan.encargado }}
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección "Ejecutado" -->
+    <div class="example-container" style="flex: 1;">
+        <h2>Finalizado</h2>
+        <div cdkDropList [cdkDropListData]="d" class="example-list" cdkDropListSortingDisabled
+            (cdkDropListDropped)="drop($event)">
+            <div class="example-box" *ngFor="let plan of d" cdkDrag>
+                No: {{ plan.noPlan }}
+                <br>
+                Encargado: {{ plan.encargado }}
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección "Archivar y ocultar" -->
+    <div class="example-container" style="flex: 1;">
+        <h2>Archivar</h2>
+        <div cdkDropList [cdkDropListData]="e" class="example-list" cdkDropListSortingDisabled
+            (cdkDropListDropped)="drop($event)">
+            <div class="example-box" *ngFor="let plan of e" cdkDrag>
+                No: {{ plan.noPlan }}
+                <br>
+                Encargado: {{ plan.encargado }}
+            </div>
+        </div>
+    </div>
+</div>

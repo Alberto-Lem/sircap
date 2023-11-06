@@ -1,0 +1,30 @@
+<h1>Listado de Inscripciones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>NIP</th>
+      <th>NoPlan</th>
+      <th>Estado</th>
+      <th>Observaciones</th>
+      <th>Fecha de Inscripción</th>
+      <th>Hora de Inscripciz</th>
+      <th>Tipo</th>
+      <th>Persona</th>
+      <th>Plan</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let inscripcion of inscripciones">
+      <td>{{ inscripcion.nip }}</td>
+      <td>{{ inscripcion.noPlan }}</td>
+      <td>{{ inscripcion.estado }}</td>
+      <td>{{ inscripcion.observaciones }}</td>
+      <td>{{ inscripcion.fechaInscripcion | date:'dd-MM-YYYY' }}</td>
+      <td>{{ inscripcion.horaInscripcion }}</td>
+      <td>{{ inscripcion.tipo }}</td>
+      <td>{{ inscripcion.persona?.nombres }} {{ inscripcion.persona?.apellidos }}</td>
+      <td>{{ inscripcion.plan?.nombrePlan }}</td>
+    </tr>
+  </tbody>
+</table>
